@@ -1,0 +1,14 @@
+<% @statistics.each_with_index do |element, index| %>
+  <tbody>
+    <tr>
+      <th scope="row">
+      <%= index + 1 %>
+      </th>
+      <td><%= element.split[2] %></td>
+      <td><%= element.split[4] %></td>
+      <td><%= element.split[6].to_i - element.split[8].to_i %>/<%= element.split[6] %></td>
+      <td><%= element.split[12] %>/<%= element.split[10] %></td>
+      <td><%= Date.today-rand(1000) %></td>
+    </tr>
+  </tbody>
+<% end %>

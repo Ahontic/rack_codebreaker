@@ -1,0 +1,59 @@
+en:
+  welcome_message: 'Welcome to the Codebraker!'
+  game_navigation: "
+  ----------------------\n
+  (s)tart\n
+  (r)ules\n
+  s(t)ats\n
+  Exit\n
+  ----------------------\n"
+  start: 's'
+  rule: 'r'
+  stats: 't'
+  exit: 'exit'
+  save: 'Do you want to save the score?'
+  play_again: 'Do you want to play one more game?'
+  bye: 'Farewell'
+  remained_attempts: 'Number of remained attemtps: %{attempts}'
+  input_guess: "Please, input your guess\n"
+  game_won: 'You have won the game. The right code was: %{secret_code}'
+  game_lost: 'Sorry, you have just lost the game. The right code was: %{secret_code}'
+  mode_info: "You have chosen:\n
+  mode: %{mode}\n
+  attempts: %{attempts}\n
+  hints: %{hint}\n"
+  hint: 'hint'
+  statistic: "|Rating\t|Name\t|Difficulty\t|Attempts Total\t|Attempts Used\t|Hints Total\t|Hints Used\t|"
+  take_hint: 'The secret includes number: %{take_hint}'
+  hints_left: 'You have %{hints} hints more'
+  no_hints_left: 'No hints left'
+  game_end: "Want to play one more game?\n"
+  errors: "Following errors have occured: \n"
+  wrong_command: "You have passed unexpected command. Please choose one from listed commands\n"
+  output_name: 'Write your name, please:'
+  output_difficulty: "\nChoose desired mode:\n-- [hell]\n-- [medium]\n-- [easy]\n"
+  rules: "\t________________________________________________________________\n
+  \t|\t\t\tGame Rules\t\t\t\t|\n
+  \t|_______________________________________________________________|\n\n
+  \tCodebreaker is a logic game in which a code-breaker tries to break a\nsecret code
+  created by a code-maker. The codemaker, which will be played by the application we’re going to write, creates a secret code of four numbers between 1 and 6.\n
+
+  \tThe codebreaker gets some number of chances to break the code (depends\n on chosen difficulty). In each turn, the codebreaker makes a guess of\n 4 numbers. The codemaker then marks the guess with up to 4 signs - + or -\n or empty spaces.\n
+
+  \tA + indicates an exact match: one of the numbers in the guess is the\nsame as one of the
+  numbers in the secret code and in the same position.\n For example:
+  Secret number - 1234\n
+  Input number - 6264\n
+  Number of pluses - 2 (second and fourth position)\n\n
+
+  \tA - indicates a number match: one of the numbers in the guess is the\nsame as one of the numbers in the secret code but in a different position.\n For example:\n
+  Secret number - 1234\n
+  Input number - 6462\n
+  Number of minuses - 2 (second and fourth position)\n
+
+  \tAn empty space indicates that there is not a current digit in a secret\n number.\n
+
+  \tIf codebreaker inputs the exact number as a secret number - codebreaker wins the
+  game. If all attempts are spent - codebreaker loses.\n
+
+  \tCodebreaker also has some number of hints(depends on chosen difficulty). If a user takes a hint - he receives back a separate digit of the secret code.\n"
