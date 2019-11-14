@@ -1,5 +1,5 @@
-@game.result.each_char do |mark|
+<% @game.result.each_char do |mark| %>
 <button type="button" class="btn btn-success marks" disabled>
-   mark
+   <%= mark %>
 </button>
-end
+<% end %>

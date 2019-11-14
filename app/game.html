@@ -59,11 +59,7 @@
               <div class="form-group guess_markers_list">
                 <div id="guess_marker">
                   <% if @game.result %>
-                    <% @game.result.each_char do |mark| %>
-                    <button type="button" class="btn btn-success marks" disabled>
-                      <%= mark %>
-                    </button>
-                    <% end %>
+                    <%= render 'marks.html' %>
                   <% end %>
                 </div>
               </div>

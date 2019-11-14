@@ -119,7 +119,6 @@ class CodebreakerWeb
 
   def game_start
     @game = Codebreaker::Game.new
-    binding.pry
     @game.set(@request.params['level'])
     @player = Codebreaker::Player.new
     @player.name = @request.params['player_name']
