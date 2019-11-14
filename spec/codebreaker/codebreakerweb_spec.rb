@@ -47,13 +47,13 @@ RSpec.describe CodebreakerWeb do
 
   context 'redirects' do
     let(:name) { 'Adam' }
-    let(:difficulty) { Codebreaker::Game::DIFFICULTY.dig(:easy, :mode) }
+    let(:difficulty) { 'easy' }
 
     before do
-      post '/game', player_name: name, level: difficulty
+      post '/game', {player_name: name, level: difficulty}, { game: game }
     end
     it 'to game page' do
-      post '/game'
+
       expect(last_response).to be_redirect
       expect(last_response.body["game"]).to eq('/game')
     end
