@@ -36,11 +36,9 @@
                   <th scope="col">Date</th>
                 </tr>
               </thead>
-                <% if @statistics.empty? %>
-                <%= “There are no winners yet! Be the first!” %>
-                <% else %>
+
                 <%= render 'statistic_to_render.html' %>
-                <% end %>
+
             </table>
           </div>
           <hr class="mb-4">

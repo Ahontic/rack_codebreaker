@@ -50,8 +50,8 @@ class CodebreakerWeb
   def submit_answer
     return load_page(:menu) unless session_present?
 
-    game_round if @game.guess_valid?(user_guess)
-    @game.attempt_used
+    game_round && @game.attempt_used if @game.guess_valid?(user_guess)
+
     save_session
     return render_result if game_result?
 

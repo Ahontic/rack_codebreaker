@@ -1,5 +1,8 @@
+<% if @statistics.empty? %>
+<%= “There are no winners yet! Be the first!” %>
+<% else %>
 <% @statistics.each_with_index do |element, index| %>
-  <tbody>
+<tbody>
     <tr>
       <th scope="row">
       <%= index + 1 %>
@@ -11,4 +14,5 @@
       <td><%= Date.today-rand(1000) %></td>
     </tr>
   </tbody>
+<% end %>
 <% end %>
