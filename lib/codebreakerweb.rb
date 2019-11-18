@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'pry'
 require 'codebreaker'
 
@@ -50,7 +52,7 @@ class CodebreakerWeb
   def submit_answer
     return load_page(:menu) unless session_present?
 
-    game_round && @game.attempt_used if @game.guess_valid?(user_guess)
+    game_round && @game.use_attempt! if @game.guess_valid?(user_guess)
 
     save_session
     return render_result if game_result?
@@ -114,7 +116,7 @@ class CodebreakerWeb
 
   def game_round
     @guess = @user_guess.chars.map(&:to_i)
-    @game.guess(@guess)
+    @result = @game.guess(@guess)
   end
 
   def game_start

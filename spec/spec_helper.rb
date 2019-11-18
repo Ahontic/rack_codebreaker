@@ -6,7 +6,6 @@ require 'rack/test'
 require 'bundler/setup'
 require 'codebreakerweb'
 
-
 RSpec.configure do |config|
   config.include Rack::Test::Methods
   # Enable flags like --only-failures and --next-failure
